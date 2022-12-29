@@ -183,7 +183,16 @@ h. Treat outliers using Deleting observations, transforming values (scaling and 
 transformation) and imputation (mean, median and zero) sns.displot(df['Age']) plt.xlabel('Age')
 plt.show()
 ######################################################
-11.
+11.How to handle the missing values in the dataset? Explain
+There are several ways to handle missing values in a dataset:
+
+Delete rows or columns: If a row or column has a large number of missing values, it may be best to delete it altogether. This is especially true if the missing values are not at random, because they may introduce bias into the analysis.
+
+Impute missing values: This involves replacing the missing values with some estimate of the true value. There are several ways to do this, including replacing the missing values with the mean or median of the other values, or using more advanced techniques such as multiple imputation or matrix completion.
+
+Predict missing values: Another option is to build a model to predict the missing values based on the other values in the dataset. This can be done using machine learning algorithms such as linear regression or random forests.
+
+Leave the missing values as-is: In some cases, it may be appropriate to leave the missing values as-is and simply analyze the data that is available. This is often the case when working with time series data, where missing values may be due to the fact that the data was not collected at certain points in time
 ###########################################################3
 12. How to handle the missing values in the dataset? Explain.
 There are several ways to handle missing values in a dataset: Delete rows or columns: If a row or
