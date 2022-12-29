@@ -9,10 +9,12 @@ understanding of the data and generate ideas for further analysis or modeling. E
 preliminary step in the data analysis process, before more formal statistical analysis or modeling is
 conducted. It is an iterative process, and you may need to perform multiple rounds of EDA to fully
 understand the data and identify all relevant patterns and relationships.
+#########################################################################################################
 2.How can you add a column to a Pandas Data Frame? *import pandas as pd data =
 pd.DataFrame({ 'id': [ 101, 123, 139, 112, 133], 'age': [ 10, 12, 13, 11, 12], 'gender': [ 'M', 'F', 'F', 'M',
 'M'], 'group': [ 'first', 'second', 'first', 'third', 'third'], 'math_score': [ 41.5, 43, 38, 47, 29.5] }) data
 series = pd.Series([40, 38, 32.5, 27, 30]) data['science_score'] = series.values data
+#################################################################################################
 3.How do you treat outliers in a dataset? Outliers are observations that are significantly different
 from the majority of the data in a dataset. There are several ways to treat outliers in a dataset:
 Ignore the outlier: If the outlier is a result of a data recording error or is not representative of the
@@ -31,6 +33,7 @@ them without careful consideration can potentially bias the results of the analy
 import pandas as pd import scipy.stats as stats import matplotlib.pyplot as plt df=
 pd.read_excel("C:/Users/91988/Desktop/AI LAB/Book1.xlsx") df
 fig = plt.figure(figsize =(6, 3)) plt.boxplot(df['Weight']) plt.show()
+##################################################################################################
 4.Differentiate between Covariance and Correlation? Explain in detail Covariance and correlation
 are two statistical measures that are used to describe the relationship between two variables.
 Covariance is a measure of the degree to which two variables change together. It is calculated by
@@ -53,6 +56,7 @@ within a fixed range (-1 to 1). In summary, covariance is a measure of the relat
 variables that is sensitive to the scale of the variables and may be difficult to interpret, while
 correlation is a standardized measure of the relationship between two variables that is not
 sensitive to the scale of the variables and is easier to interpret.
+#############################################################################################
 5. What are the challenges involved in Data Integration Data integration involves combining data
 from different sources and making it available for analysis and use. Some of the challenges
 involved in data integration include: Data heterogeneity: Different data sources often use
@@ -67,12 +71,14 @@ scalability. Real-time integration: In some cases, data needs to be integrated i
 which can be a challenge due to the complexity and volume of the data. Integration with
 legacy systems: Integrating data from legacy systems can be difficult due to the outdated
 technologies and systems involved.
+##################################################################################################3
 6.Two dias are thrown simultaneously,and the sum of the number obtained found to be 7.What is
 the probability that the number 3 has appeared st least one?
 Two dias are thrown simultaneously,So total number of possible outcomes=36 (i)Sum of the nuber
 appearing on the dice is 7.
 So,the possible ways are(1,6),(2,5),(3,4),(4,3),(5,2)and(6,1) Number of possible ways=6 number of
 possible 3 coming=2/6
+####################################################################################################
 (7) (i)Spot outliers in Income using bivariate plot import matplotlib.pyplot as plt df =
 pd.read_csv("credit.csv") plt.scatter(df["Income"], df["AnotherVariable"]) plt.show()
 12/28/22, 8:24 PM push ongithub - Jupyter Notebook
@@ -116,6 +122,7 @@ localhost:8888/notebooks/push ongithub.ipynb 4/6
 imputation_method == 'mean': df.loc[outliers.index] = df.loc[outliers.index].fillna(df.mean()) elif
 imputation_method == 'median': df.loc[outliers.index] = df.loc[outliers.index].fillna(df.median()) elif
 imputation_method == 'zero': df.loc[outliers.index] = df.loc[outliers.index].fillna(0)
+#####################################################################################################3
 8.For the titanic dataset perform the following: i.Display the number of missing values for each
 feature in the dataset import numpy as np import pandas as pd import matplotlib.pyplot as plt
 import seaborn as sns import missingno as msno
@@ -142,6 +149,7 @@ company = df.groupby("Company")["Sales"].mean() highest_sales_company = company.
 print(highest_sales_company)
 sales_stats = df["Sales"].describe() sales_stats_transposed = sales_stats.transpose()
 print(sales_stats_transposed)
+##############################################################################################
 9.Using the below Pandas data frame, find the company with the highest average sales. Derive the
 summary statistics for the sales column and transpose the statistics.
 create a dataframe comany * person * sales
@@ -152,6 +160,7 @@ df.groupby("Company")["Sales"].mean() highest_sales_company = sales_by_company.i
 print(highest_sales_company)
 sales_stats = df["Sales"].describe() sales_stats_transposed = sales_stats.transpose()
 print(sales_stats_transposed)
+##################################################################################3
 10.10. Problem statement a. Detect outliers using z score method import pandas as pd df =
 pd.read_csv("C:/Users/k2060/Documents/AI&ML/archive (k)/tested.csv") mean = df['Age'].mean()
 std = df['Age'].std() df['z_score'] = (df['Age'] - mean) / std threshold = 3 outliers = df[(df['z_score'] >
@@ -173,7 +182,9 @@ g. Spot outlier using Distribution Plot. plt.hist(df['Age']) plt.xlabel('Age') p
 h. Treat outliers using Deleting observations, transforming values (scaling and cube root
 transformation) and imputation (mean, median and zero) sns.displot(df['Age']) plt.xlabel('Age')
 plt.show()
+######################################################
 11.
+###########################################################3
 12. How to handle the missing values in the dataset? Explain.
 There are several ways to handle missing values in a dataset: Delete rows or columns: If a row or
 column has a large number of missing values, it may be best to delete it altogether. This is
@@ -189,11 +200,13 @@ localhost:8888/notebooks/push ongithub.ipynb 6/6 g g g g
 values as-is: In some cases, it may be appropriate to leave the missing values as-is and simply
 analyze the data that is available. This is often the case when working with time series data, where
 missing values may be due to the fact that the data was not collected at certain points in time.
+##############################################################################################3
 13.The statistical summary of Iris dataset is as follows.Analyse and explain statistical metrics from
 above summary.
 import pandas as pd import numpy as np df=pd.read_csv("C:/Users/91988/Downloads/archive
 (11)/Iris.csv") df
 df.describe()
+###################################################################################
 14.. Describe univariate, bivariate, and multivariate analysis with suitable examples.
 univariate covarience import pandas as pd x=pd.Series([1,2,5,10,20]) y=pd.Series([1,2,5,-10,12])
 print("the covarience value:",x.cov(y))
@@ -209,3 +222,4 @@ multivariate coverience import pandas as pd import numpy as np
 df=pd.read_csv("C:/Users/91988/Downloads/archive (11)/Iris.csv") df df.cov()
 multivariate correlation import pandas as pd import numpy as np
 df=pd.read_csv("C:/Users/91988/Downloads/archive (11)/Iris.csv") df df.corr()
+###########
